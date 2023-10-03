@@ -1,9 +1,9 @@
 ---
 banner:
-  title: "Andromeda is the most intuitive </br> way to prototype Designs"
+  title: "We Develop Digital Strategies, <br>Products And Services."
   image: /images/banner-app.png
   link:
-    label: Get Premium Version
+    label: Get Quote
     href: "#"
 
 ##brands

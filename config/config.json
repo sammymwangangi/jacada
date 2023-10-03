@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "Andromeda Light Nextjs",
+    "title": "Jacada",
     "base_url": "/",
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.svg",
-    "logo_width": "240",
-    "logo_height": "34",
-    "logo_text": "Andromeda"
+    "favicon": "/images/favicon-32.png",
+    "logo": "/images/logo.png",
+    "logo_width": "200",
+    "logo_height": "70",
+    "logo_text": "Jacada"
   },
 
   "settings": {
@@ -18,34 +18,34 @@
   "params": {
     "tag_manager_id": "",
     "contact_form_action": "#",
-    "footer_content": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "copyright": "Designed & Developed By [Themefisher](https:www.themefisher.com)"
+    "footer_content": "We Develop Digital Strategies, Products And Services.",
+    "copyright": "2023 © Jacada"
   },
 
   "contact_info": {
-    "phone": "+887887998",
-    "email": "info@andromeda.io",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624"
+    "phone": "0799104763,0743686562",
+    "email": "info@jacada.co.ke",
+    "location": "Nairobi, Kenya"
   },
 
   "nav_button": {
     "enable": true,
-    "label": "Download Now",
+    "label": "Get Quote",
     "link": "https://themefisher.com/products/andromeda-light-nextjs"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Jacada",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Andromeda-light Nextjs Blog Template"
+    "meta_description": "Jacada is a software development and consulting firm that specializes in strategy, creativity, design and innovative technology."
   },
 
   "call_to_action": {
     "enable": true,
-    "title": "Get Andromeda Now",
+    "title": "Do You Have Any Question",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.",
     "button": {
-      "label": "Download The Theme",
+      "label": "Get Quote",
       "link": "https://themefisher.com/products/andromeda-light-nextjs"
     }
   },
