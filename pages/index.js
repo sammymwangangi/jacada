@@ -13,7 +13,7 @@ import { TbQuote } from "react-icons/tb";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const Home = ({ banner, brands, features, intro, speciality, testimonial }) => {
+const Home = ({ banner, brands, about_us, features, intro, speciality, testimonial }) => {
   const paginationRef = useRef(null);
   const testimonialPaginationRef = useRef(null);
 
@@ -186,7 +186,7 @@ const Home = ({ banner, brands, features, intro, speciality, testimonial }) => {
                 </div>
               </div>
             </div>
-            <div className="row border-y border-border py-5">
+            {/* <div className="row border-y border-border py-5">
               <div className="animate from-right col-12">
                 <Swiper
                   loop={true}
@@ -219,16 +219,70 @@ const Home = ({ banner, brands, features, intro, speciality, testimonial }) => {
                   ))}
                 </Swiper>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
+
+      {/* About */}
+      <div className="section container">
+          <div className="row items-center justify-center">
+            <div className="animate md:col-6 lg:col-5 md:order-2">
+              <div className="about-image relative p-[60px]">
+                <ImageFallback
+                  className="animate relative w-full rounded-2xl"
+                  src={about_us.image}
+                  width={425}
+                  height={487}
+                  alt=""
+                />
+                <Circle
+                  className="top-4 left-4 z-[-1]"
+                  width={85}
+                  height={85}
+                />
+                <Circle
+                  width={37}
+                  height={37}
+                  fill={false}
+                  className="top-20 right-10 z-[-1]"
+                />
+                <Circle
+                  className="top-1/2 right-12 -z-[1]"
+                  width={24}
+                  height={24}
+                />
+                <Circle
+                  className="bottom-6 right-6 z-[-1]"
+                  width={85}
+                  height={85}
+                />
+                <Circle
+                  className="top-1/2 left-12 z-[-1]"
+                  width={20}
+                  height={20}
+                />
+                <Circle
+                  className="bottom-12 left-8 z-[1]"
+                  width={47}
+                  height={47}
+                  fill={false}
+                />
+              </div>
+            </div>
+            <div className="animate md:col-6 lg:col-4 md:order-1">
+              <p>{about_us.subtitle}</p>
+              {markdownify(about_us.title, "h2", "section-title bar-left mt-4")}
+              {markdownify(about_us.content, "p", "mt-10")}
+            </div>
+          </div>
+        </div>
 
       {/* Features */}
       <section className="section">
         <div className="container text-center">
           <div className="animate">
-            <p className="uppercase">{features.sub_title}</p>
+            {/* <p className="uppercase">{features.sub_title}</p> */}
             {markdownify(features.title, "h2", "mt-4 section-title")}
             {markdownify(features.description, "p", "mt-10")}
           </div>
@@ -348,7 +402,7 @@ const Home = ({ banner, brands, features, intro, speciality, testimonial }) => {
       {/* Special Features */}
       <section className="section">
         <div className="container">
-          <div className="row items-center justify-center">
+          <div className="row items-center justify-center mb-5">
             <div className="animate lg:col-6 lg:order-2">
               <ImageFallback
                 className="mx-auto"

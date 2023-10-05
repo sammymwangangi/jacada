@@ -218,45 +218,6 @@ const About = ({ data }) => {
           </div>
         </div>
 
-        {/* Clients */}
-        <div className="section container">
-          <div className="animate text-center">
-            <p>{clients.subtitle}</p>
-            {markdownify(clients.title, "h2", "section-title mt-4")}
-          </div>
-          <div className="animate from-right col-12 mt-16">
-            <Swiper
-              loop={true}
-              slidesPerView={3}
-              breakpoints={{
-                992: {
-                  slidesPerView: 5,
-                },
-              }}
-              spaceBetween={20}
-              modules={[Autoplay]}
-              autoplay={{ delay: 3000 }}
-            >
-              {clients.brands.map((brand, index) => (
-                <SwiperSlide
-                  className=" h-20 cursor-pointer py-6 px-6 grayscale  transition hover:grayscale-0 lg:px-10"
-                  key={"brand-" + index}
-                >
-                  <div className="relative h-full">
-                    <ImageFallback
-                      className="object-contain"
-                      src={brand}
-                      sizes="100vw"
-                      alt=""
-                      fill={true}
-                      priority={true}
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
 
         {/* Members */}
         <div className="section container">
@@ -282,39 +243,6 @@ const About = ({ data }) => {
                     />
                     <h4 className="mt-8">{member.name}</h4>
                     <p className="mt-3">{member.field}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Office */}
-        <div className="section container">
-          <div className="animate text-center">
-            <p>{our_office.subtitle}</p>
-            {markdownify(our_office.title, "h2", "section-title mt-4")}
-            {markdownify(our_office.content, "p", "mt-16")}
-          </div>
-          <div className="row justify-center">
-            <div className="lg:col-10">
-              <div className="row  justify-center">
-                {our_office.countries.map((country, index) => (
-                  <div
-                    key={("country-", index)}
-                    className="animate mt-10 md:col-6 xl:col-3"
-                  >
-                    <div className="rounded-xl p-5 shadow-[0_4px_25px_rgba(0,0,0,.05)]">
-                      <ImageFallback
-                        // className="mx-auto"
-                        src={country.flag}
-                        width={80}
-                        height={80}
-                        alt={country.name}
-                      />
-                      <h5 className="h4 mt-2">{country.name}</h5>
-                      <p className="mt-2">{country.location}</p>
-                    </div>
                   </div>
                 ))}
               </div>
