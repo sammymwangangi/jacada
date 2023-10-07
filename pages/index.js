@@ -15,6 +15,7 @@ import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { RadioGroup } from '@headlessui/react';
 import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
+import config from "@config/config.json";
 
 
 const frequencies = [
@@ -425,7 +426,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
       </section>
 
       {/* Special Features */}
-      <section className="section">
+      <section id="services" className="section">
         <div className="container">
           <div className="row items-center justify-center">
             <div className="animate lg:col-6 lg:order-2">
@@ -680,7 +681,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
         </div>
       </section>
 
-      <div id="pricing" className="isolate overflow-hidden">
+      <section id="pricing" className="isolate overflow-hidden">
         <div className="flow-root bg-gray-900 pb-16 pt-24 sm:pt-32 lg:pb-0">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative z-10">
@@ -809,14 +810,154 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
             </div>
           </div>
         </div>
-        <div className="relative bg-gray-50 lg:pt-14">
+        <div className="relative bg-white lg:pt-14">
           <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Cta */}
-      <Cta />
+      {/* Contact Us */}
+      <section id="contact-us" className="section pt-0">
+        <div className="container-xl">
+          <div className="relative px-4 py-[70px]">
+            <div className="text-center">
+              <div className="animate">
+                <h2 className="mt-4 section-title">Let’s work together</h2>
+                <p className="mt-10">We can’t wait to hear from you.</p>
+              </div>
+              <div className="section row items-center justify-center">
+          <div className="animate lg:col-5">
+            <ImageFallback
+              className="mx-auto lg:pr-10"
+              src="/images/vectors/contact.png"
+              width={497}
+              height={397}
+              alt=""
+            />
+          </div>
+          <div className="animate lg:col-5">
+            <form
+              method="POST"
+              action={config.params.contact_form_action}
+              className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
+            >
+              <h2 className="h4 mb-6">Send A Message</h2>
+              <div className="mb-6">
+                <label
+                  className="mb-2 block font-medium text-dark"
+                  htmlFor="name"
+                >
+                  Name
+                </label>
+                <input
+                  className="form-input w-full"
+                  name="name"
+                  placeholder="Full Name"
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label
+                  className="mb-2 block font-medium text-dark"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  className="form-input w-full"
+                  name="email"
+                  placeholder="Email Address"
+                  type="email"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label
+                  className="mb-2 block font-medium text-dark"
+                  htmlFor="subject"
+                >
+                  Subject
+                </label>
+                <input
+                  className="form-input w-full"
+                  name="subject"
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label
+                  className="mb-2 block font-medium text-dark"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+                <textarea className="form-textarea w-full" rows="6" />
+              </div>
+              <button className="btn btn-primary block w-full">
+                Submit Now
+              </button>
+            </form>
+          </div>
+        </div>
+            </div>
+            <div className="bg-theme absolute top-0 left-0 w-full">
+              <Circle
+                className="left-[10%] top-12"
+                width={32}
+                height={32}
+                fill={false}
+              />
+              <Circle className="left-[3%] top-[30%]" width={85} height={85} />
+              <Circle
+                className="left-[22%] bottom-[52%]"
+                width={20}
+                height={20}
+              />
+              <Circle
+                className="left-[15%] bottom-[35%]"
+                width={47}
+                height={47}
+                fill={false}
+              />
+              <Circle
+                className="left-[6%] bottom-[6%]"
+                width={62}
+                height={62}
+                fill={false}
+              />
+              <Circle
+                className="right-[12%] top-[12%]"
+                width={20}
+                height={20}
+              />
+              <Circle
+                className="right-[2%] top-[30%]"
+                width={73}
+                height={73}
+                fill={false}
+              />
+              <Circle
+                className="right-[19%] top-[50%]"
+                width={37}
+                height={37}
+                fill={false}
+              />
+              <Circle
+                className="right-[33%] top-[52%]"
+                width={20}
+                height={20}
+              />
+              <Circle
+                className="right-[5%] bottom-[18%]"
+                width={65}
+                height={65}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </Base>
   );
 };

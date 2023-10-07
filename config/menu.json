@@ -10,7 +10,7 @@
     },
     {
       "name": "Services",
-      "url": "/posts"
+      "url": "#services"
     },
     {
       "name": "Portfolio",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Contact",
-      "url": "/contact"
+      "url": "#contact-us"
     }
   ],
   "footer": [
