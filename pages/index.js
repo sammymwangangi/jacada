@@ -26,7 +26,7 @@ const tiers = [
   {
     name: 'Starter',
     id: 'tier-starter',
-    href: '#',
+    href: '#contact-us',
     featured: false,
     description: 'All your essential cloud storage needs, taken care of.',
     price: { monthly: 'KSH.600', annually: 'KSH.6000' },
@@ -35,7 +35,7 @@ const tiers = [
   {
     name: 'Business Plan',
     id: 'tier-scale',
-    href: '#',
+    href: '#contact-us',
     featured: true,
     description: 'The best cloud storage services for your thriving business.',
     price: { monthly: 'KSH. 1500', annually: 'KSH.15000' },
@@ -51,7 +51,7 @@ const tiers = [
   {
     name: 'Enterprise Plan',
     id: 'tier-growth',
-    href: '#',
+    href: '#contact-us',
     featured: false,
     description: 'Convenient cloud storage to take your business to the next level.',
     price: { monthly: 'KSH.3000', annually: 'KSH.30000' },
@@ -511,7 +511,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
         </div>
       </section>
 
-      <div className="container-xl relative">
+      <section className="section container-xl relative">
         <div className="bg-theme absolute top-0 left-0 w-full">
           <Circle
             className="left-[7%] top-[21%]"
@@ -593,10 +593,10 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Testimonial */}
-      <section className="section pt-0">
+      <section className="section pt-5">
         <div className="container">
           <div className="animate text-center">
             <p>{testimonial.subtitle}</p>
@@ -681,6 +681,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
         </div>
       </section>
 
+      {/* Pricing Plans */}
       <section id="pricing" className="isolate overflow-hidden">
         <div className="flow-root bg-gray-900 pb-16 pt-24 sm:pt-32 lg:pb-0">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
