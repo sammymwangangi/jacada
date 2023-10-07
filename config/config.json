@@ -17,7 +17,7 @@
 
   "params": {
     "tag_manager_id": "",
-    "contact_form_action": "#",
+    "contact_form_action": "#contact-us",
     "footer_content": "We Develop Digital Strategies, Products And Services.",
     "copyright": "2023 © Jacada"
   },
@@ -31,7 +31,7 @@
   "nav_button": {
     "enable": true,
     "label": "Get Quote",
-    "link": "contact"
+    "link": "#contact-us"
   },
 
   "metadata": {
@@ -46,7 +46,7 @@
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.",
     "button": {
       "label": "Get Quote",
-      "link": "contact"
+      "link": "#contact-us"
     }
   },
 

@@ -4,7 +4,7 @@ banner:
   image: /images/banner-app.png
   link:
     label: Get Quote
-    href: "#"
+    href: "#contact-us"
 
 ## about us
 about_us:
