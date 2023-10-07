@@ -1,6 +1,8 @@
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import { useState } from "react";
-import { LiteYoutubeEmbed } from "../../node_modules/react-lite-yt-embed/dist/index";
+// import { LiteYoutubeEmbed } from "../../node_modules/react-lite-yt-embed/dist/index";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import ImageFallback from "./ImageFallback";
 
 function VideoPopup({ id, thumbnail, width = 700, height = 394 }) {
@@ -9,7 +11,8 @@ function VideoPopup({ id, thumbnail, width = 700, height = 394 }) {
     <div className="animate relative  flex overflow-hidden rounded-2xl">
       {showPopup ? (
         <div>
-          <LiteYoutubeEmbed id={id} defaultPlay={true} />
+          {/* <LiteYoutubeEmbed id={id} defaultPlay={true} /> */}
+          <LiteYouTubeEmbed id={id} />
         </div>
       ) : (
         <div className="relative inline-block w-full">

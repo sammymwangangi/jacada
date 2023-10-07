@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "We Develop Digital Strategies, <br>Products And Services."
+  title: "We Develop Digital Strategies, <br/>Products And Services."
   image: /images/banner-app.png
   link:
     label: Get Quote
@@ -54,12 +54,22 @@ speciality:
     title: Software development
     subtitle: WEB & MOBILE
     description: At the core of Jacada is Software Development. We specialise in creating and customizing software solutions for small to large enterprices.
-    image: /images/services/software.jpg
+    image: /images/services/softwarenew.jpg
   secondary:
     title: Bespoke reports
     subtitle: REPORTING SOFTWARE
     description: We create and integrate reporting software to existing systems and data warehouses. Such reports include Accounting, Financial, Sales, etc.
-    image: /images/services/reports.jpg
+    image: /images/services/reportsnew.jpg
+  primary2:
+    title: Biometric and Security
+    subtitle: BIOMETRIC AND SECURITY
+    description: We configure and install Biometrics/Security systems such as Attendance systems, security systems and CCTV cameras Each person's unique biometric identity can be used to replace or at least augment password systems for computers, phones, and restricted access rooms and buildings.In other words, biometric security means your body becomes the “key” to unlock your access.
+    image: /images/services/biometricnew.jpg
+  secondary2:
+    title: AUTOMATION
+    subtitle: AUTOMATED BACKUP
+    description: We provide a technology concerned with performing a process by means of programmed commands combined with automatic feedback control to ensure proper execution of the instructions.
+    image: /images/services/automation.svg
 
 
 #Testimonial

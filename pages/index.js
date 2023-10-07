@@ -3,6 +3,7 @@ import Circle from "@layouts/components/Circle";
 import Cta from "@layouts/components/Cta";
 import ImageFallback from "@layouts/components/ImageFallback";
 import VideoPopup from "@layouts/components/VideoPopup";
+import { TagList, TagListItem } from '@layouts/components/TagList'
 import { getListPage } from "@lib/contentParser";
 import { gsap } from "@lib/gsap";
 import { markdownify } from "@lib/utils/textConverter";
@@ -225,7 +226,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
       </section>
 
       {/* About */}
-      
+
 
       {/* Features */}
       <section className="section">
@@ -288,7 +289,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
                 {markdownify(intro.description, "p", "mt-10")}
               </div>
               <div className="mx-auto mt-10 h-full max-h-[394px] w-full max-w-[716px]">
-                <VideoPopup id={intro.video_id} thumbnail={intro.thumbnail} />
+                <VideoPopup id="cK-5sf_n204" thumbnail={intro.thumbnail} />
               </div>
             </div>
             <div className="bg-theme absolute top-0 left-0 w-full">
@@ -351,7 +352,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
       {/* Special Features */}
       <section className="section">
         <div className="container">
-          <div className="row items-center justify-center mb-5">
+          <div className="row items-center justify-center">
             <div className="animate lg:col-6 lg:order-2">
               <ImageFallback
                 className="mx-auto"
@@ -391,8 +392,132 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
               {markdownify(speciality.secondary.description, "p", "mt-10")}
             </div>
           </div>
+          <div className="row items-center justify-center">
+            <div className="animate lg:col-6 lg:order-2">
+              <ImageFallback
+                className="mx-auto"
+                src={speciality.primary2.image}
+                width={575}
+                height={511}
+                alt="primary2 speciality"
+              />
+            </div>
+            <div className="animate lg:col-5 lg:order-1">
+              <p>{speciality.primary2.subtitle}</p>
+              {markdownify(
+                speciality.primary2.title,
+                "h2",
+                "mt-4 section-title bar-left"
+              )}
+              {markdownify(speciality.primary2.description, "p", "mt-10")}
+            </div>
+          </div>
+          <div className="row items-center">
+            <div className="animate lg:col-6">
+              <ImageFallback
+                className="mx-auto"
+                src={speciality.secondary2.image}
+                width={575}
+                height={511}
+                alt="secondary2 speciality"
+              />
+            </div>
+            <div className="animate lg:col-5">
+              <p>{speciality.secondary2.subtitle}</p>
+              {markdownify(
+                speciality.secondary2.title,
+                "h2",
+                "mt-4 section-title bar-left"
+              )}
+              {markdownify(speciality.secondary2.description, "p", "mt-10")}
+            </div>
+          </div>
         </div>
       </section>
+
+      <div className="container-xl relative">
+        <div className="bg-theme absolute top-0 left-0 w-full">
+          <Circle
+            className="left-[7%] top-[21%]"
+            width={32}
+            height={32}
+            fill={false}
+          />
+          <Circle
+            className="left-[30%] top-[10%]"
+            width={20}
+            height={20}
+            fill={false}
+          />
+          <Circle
+            className="left-[4%] bottom-[35%]"
+            width={20}
+            height={20}
+            fill={false}
+          />
+          <Circle
+            className="left-[10%] bottom-[11%]"
+            width={37}
+            height={37}
+            fill={false}
+          />
+          <Circle
+            className="left-[44%] bottom-[48%]"
+            width={37}
+            height={37}
+            fill={false}
+          />
+          <Circle
+            className="left-[35%] bottom-[22%]"
+            width={20}
+            height={20}
+            fill={false}
+          />
+          <Circle
+            className="right-[32%] top-[2%]"
+            width={47}
+            height={47}
+            fill={false}
+          />
+        </div>
+        <div className="row items-center justify-center py-[90px]">
+          <div className="md:col-6 xl:col-4">
+            <div className="animate p-5">
+              <p>CUSTOMER SERVICES</p>
+              <h2 className="mt-4 section-title bar-left">CUSTOMER SERVICES</h2>
+              <p className="mt-10">
+                Your customers and employees want to talk to you—make it easy for them. Our support products are flexible and empower you to assist people when they need you most. Conversations flow seamlessly across all channels, leading to greater productivity and satisfaction all around.
+              </p>
+
+              <TagList className="mt-4">
+                <TagListItem>HELP DESK-TICKETING</TagListItem>
+                <TagListItem>CALL CENTER</TagListItem>
+                <TagListItem>LIVE CHATS</TagListItem>
+                <TagListItem>WHATSAPP INTEGRATIONS</TagListItem>
+                <TagListItem>IT CONSULTANCY</TagListItem>
+              </TagList>
+
+            </div>
+          </div>
+          <div className="md:col-6 xl:col-5">
+            <div className="px-4 ">
+              {/* <VideoPopup
+                  id={video.video_id}
+                  thumbnail={video.thumbnail}
+                  width={540}
+                  height={585}
+                /> */}
+              <ImageFallback
+                className="animate relative w-full rounded-2xl"
+                src="/images/services/customer.jpg"
+                width={425}
+                height={487}
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Testimonial */}
       <section className="section pt-0">
