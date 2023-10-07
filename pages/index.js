@@ -722,7 +722,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
                 <defs>
                   <radialGradient id="d25c25d4-6d43-4bf9-b9ac-1842a30a4867">
                     <stop stopColor="#7775D6" />
-                    <stop offset={1} stopColor="#E935C1" />
+                    <stop offset={1} stopColor="#a7bd63" />
                   </radialGradient>
                 </defs>
               </svg>
