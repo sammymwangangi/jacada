@@ -27,20 +27,20 @@ const tiers = [
     id: 'tier-starter',
     href: '#',
     featured: false,
-    description: 'All your essential business finances, taken care of.',
-    price: { monthly: '$15', annually: '$144' },
-    mainFeatures: ['Basic invoicing', 'Easy to use accounting', 'Mutli-accounts'],
+    description: 'All your essential cloud storage needs, taken care of.',
+    price: { monthly: 'KSH.600', annually: 'KSH.6000' },
+    mainFeatures: ['50 GB Cloud Storage', 'For your Devices'],
   },
   {
-    name: 'Scale',
+    name: 'Business Plan',
     id: 'tier-scale',
     href: '#',
     featured: true,
-    description: 'The best financial services for your thriving business.',
-    price: { monthly: '$60', annually: '$576' },
+    description: 'The best cloud storage services for your thriving business.',
+    price: { monthly: 'KSH. 1500', annually: 'KSH.15000' },
     mainFeatures: [
-      'Advanced invoicing',
-      'Easy to use accounting',
+      '125 GB Cloud Storage',
+      'For your Devices',
       'Mutli-accounts',
       'Tax planning toolkit',
       'VAT & VATMOSS filing',
@@ -48,13 +48,13 @@ const tiers = [
     ],
   },
   {
-    name: 'Growth',
+    name: 'Enterprise Plan',
     id: 'tier-growth',
     href: '#',
     featured: false,
-    description: 'Convenient features to take your business to the next level.',
-    price: { monthly: '$30', annually: '$288' },
-    mainFeatures: ['Basic invoicing', 'Easy to use accounting', 'Mutli-accounts', 'Tax planning toolkit'],
+    description: 'Convenient cloud storage to take your business to the next level.',
+    price: { monthly: 'KSH.3000', annually: 'KSH.30000' },
+    mainFeatures: ['250 GB Cloud Storage', 'For your Devices', 'Mutli-accounts', 'Tax planning toolkit'],
   },
 ]
 const sections = [
@@ -685,11 +685,10 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative z-10">
               <h2 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
-                Simple pricing, no commitment
+              Our Pricing Plan
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus
-                molestiae voluptatum quos odit doloribus.
+              Get Started with storage plans in Kenya with the starter package from Ksh. 600 per month (50 GB Storage).
               </p>
               <div className="mt-16 flex justify-center">
                 <RadioGroup
@@ -761,7 +760,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
                           {tier.price[frequency.value]}
                         </p>
                         <div className="text-sm leading-5">
-                          <p className={tier.featured ? 'text-gray-900' : 'text-white'}>USD</p>
+                          <p className={tier.featured ? 'text-gray-900' : 'text-white'}>KES</p>
                           <p
                             className={tier.featured ? 'text-gray-500' : 'text-gray-400'}
                           >{`Billed ${frequency.value}`}</p>
