@@ -68,8 +68,14 @@ speciality:
   secondary2:
     title: AUTOMATION
     subtitle: AUTOMATED BACKUP
-    description: We provide a technology concerned with performing a process by means of programmed commands combined with automatic feedback control to ensure proper execution of the instructions.
+    description: Instant gratification. Fastest channel for resolution of queries. Simple conversations allowing them to chat with businesses like they do with friends and family. Reach out to business instantly without the hassles of writing mails or dialing IVRs Making customer interactions simpler and quicker. Saving thousands of work hours through automation of routine services. Increasing customer satisfaction and positive social feedback.
+
     image: /images/services/automation.svg
+  secondary3:
+    title: DIGITAL STRATEGY
+    subtitle: DIGITAL STRATEGY
+    description: We provide a technology concerned with performing a process by means of programmed commands combined with automatic feedback control to ensure proper execution of the instructions.
+    image: /images/services/digital-strategy.jpg
 
 
 #Testimonial

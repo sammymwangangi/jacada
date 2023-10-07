@@ -488,6 +488,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
               {markdownify(speciality.primary2.description, "p", "mt-10")}
             </div>
           </div>
+          
           <div className="row items-center">
             <div className="animate lg:col-6">
               <ImageFallback
@@ -506,6 +507,26 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
                 "mt-4 section-title bar-left"
               )}
               {markdownify(speciality.secondary2.description, "p", "mt-10")}
+            </div>
+          </div>
+          <div className="row items-center justify-center">
+            <div className="animate lg:col-6 lg:order-2">
+              <ImageFallback
+                className="mx-auto"
+                src={speciality.secondary3.image}
+                width={575}
+                height={511}
+                alt="secondary3 speciality"
+              />
+            </div>
+            <div className="animate lg:col-5 lg:order-1">
+              <p>{speciality.secondary3.subtitle}</p>
+              {markdownify(
+                speciality.secondary3.title,
+                "h2",
+                "mt-4 section-title bar-left"
+              )}
+              {markdownify(speciality.secondary3.description, "p", "mt-10")}
             </div>
           </div>
         </div>
@@ -585,7 +606,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
                 /> */}
               <ImageFallback
                 className="animate relative w-full rounded-2xl"
-                src="/images/services/customer.jpg"
+                src="/images/services/customer-service.png"
                 width={425}
                 height={487}
                 alt=""
@@ -596,7 +617,7 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
       </section>
 
       {/* Testimonial */}
-      <section className="section pt-5">
+      <section className="section pt-0 mt-10">
         <div className="container">
           <div className="animate text-center">
             <p>{testimonial.subtitle}</p>
