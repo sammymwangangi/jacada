@@ -7,7 +7,7 @@ banner:
     href: "#contact-us"
 
 ## about us
-about_us:
+about:
   subtitle: WHO WE ARE
   title: Hello, We’re Jacada Here For Your Help
   content: Jacada Technology Limited was founded as a result of the ever-increasing need of real-time, accessible, efficiency, fast and accurate technology solutions that are tailor made to complement the business processes at work place. With this we have embarked on a journey to become a both SaaS and on premises solution provider, to achieve this we have strategically partnered with like-minded organization to provide the best solutions in the region and beyond.

@@ -16,6 +16,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { RadioGroup } from '@headlessui/react';
 import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
 import config from "@config/config.json";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 
 const frequencies = [
@@ -89,7 +91,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Home = ({ banner, brands, about_us, features, intro, speciality, testimonial }) => {
+const Home = ({ banner, about, brands, features, intro, speciality, testimonial }) => {
   const paginationRef = useRef(null);
   const testimonialPaginationRef = useRef(null);
   const [frequency, setFrequency] = useState(frequencies[0])
@@ -302,6 +304,59 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
       </section>
 
       {/* About */}
+      <div className="section container">
+          <div className="row items-center justify-center">
+            <div className="animate md:col-6 lg:col-5 md:order-2">
+              <div className="about-image relative p-[60px]">
+                <ImageFallback
+                  className="animate relative w-full rounded-2xl"
+                  src="/images/about/about.jpg"
+                  width={425}
+                  height={487}
+                  alt="about"
+                />
+                <Circle
+                  className="top-4 left-4 z-[-1]"
+                  width={85}
+                  height={85}
+                />
+                <Circle
+                  width={37}
+                  height={37}
+                  fill={false}
+                  className="top-20 right-10 z-[-1]"
+                />
+                <Circle
+                  className="top-1/2 right-12 -z-[1]"
+                  width={24}
+                  height={24}
+                />
+                <Circle
+                  className="bottom-6 right-6 z-[-1]"
+                  width={85}
+                  height={85}
+                />
+                <Circle
+                  className="top-1/2 left-12 z-[-1]"
+                  width={20}
+                  height={20}
+                />
+                <Circle
+                  className="bottom-12 left-8 z-[1]"
+                  width={47}
+                  height={47}
+                  fill={false}
+                />
+              </div>
+            </div>
+            <div className="animate md:col-6 lg:col-4 md:order-1">
+              <p>WHO WE ARE</p>
+              
+              <h2 className="section-title bar-left mt-4">Hello, We’re Jacada Here For Your Help</h2>
+              <p className="mt-10">Jacada Technology Limited was founded as a result of the ever-increasing need of real-time, accessible, efficiency, fast and accurate technology solutions that are tailor made to complement the business processes at work place. With this we have embarked on a journey to become a both SaaS and on premises solution provider, to achieve this we have strategically partnered with like-minded organization to provide the best solutions in the region and beyond.</p>
+            </div>
+          </div>
+        </div>
 
 
       {/* Features */}
@@ -365,7 +420,8 @@ const Home = ({ banner, brands, about_us, features, intro, speciality, testimoni
                 {markdownify(intro.description, "p", "mt-10")}
               </div>
               <div className="mx-auto mt-10 h-full max-h-[394px] w-full max-w-[716px]">
-                <VideoPopup id="cK-5sf_n204" thumbnail={intro.thumbnail} />
+                {/* <VideoPopup id="cK-5sf_n204" thumbnail={intro.thumbnail} /> */}
+                <LiteYouTubeEmbed id="cc4IxEprSU8" />
               </div>
             </div>
             <div className="bg-theme absolute top-0 left-0 w-full">
