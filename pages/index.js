@@ -86,6 +86,12 @@ const sections = [
     ],
   },
 ]
+const stats = [
+  { id: 1, name: 'Working Hours', value: '654+' },
+  { id: 2, name: 'Completed Projects', value: '12' },
+  { id: 3, name: 'No. of Clients', value: '10' },
+  { id: 4, name: 'Team Members', value: '5' },
+]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -305,58 +311,66 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
 
       {/* About */}
       <div id="about" className="section container">
-          <div className="row items-center justify-center">
-            <div className="animate md:col-6 lg:col-5 md:order-2">
-              <div className="about-image relative p-[60px]">
-                <ImageFallback
-                  className="animate relative w-full rounded-2xl"
-                  src="/images/about/about.jpg"
-                  width={425}
-                  height={487}
-                  alt="about"
-                />
-                <Circle
-                  className="top-4 left-4 z-[-1]"
-                  width={85}
-                  height={85}
-                />
-                <Circle
-                  width={37}
-                  height={37}
-                  fill={false}
-                  className="top-20 right-10 z-[-1]"
-                />
-                <Circle
-                  className="top-1/2 right-12 -z-[1]"
-                  width={24}
-                  height={24}
-                />
-                <Circle
-                  className="bottom-6 right-6 z-[-1]"
-                  width={85}
-                  height={85}
-                />
-                <Circle
-                  className="top-1/2 left-12 z-[-1]"
-                  width={20}
-                  height={20}
-                />
-                <Circle
-                  className="bottom-12 left-8 z-[1]"
-                  width={47}
-                  height={47}
-                  fill={false}
-                />
-              </div>
-            </div>
-            <div className="animate md:col-6 lg:col-4 md:order-1">
-              <p>WHO WE ARE</p>
-              
-              <h2 className="section-title bar-left mt-4">Hello, We’re Jacada Here For Your Help</h2>
-              <p className="mt-10">Jacada Technology Limited was founded as a result of the ever-increasing need of real-time, accessible, efficiency, fast and accurate technology solutions that are tailor made to complement the business processes at work place. With this we have embarked on a journey to become a both SaaS and on premises solution provider, to achieve this we have strategically partnered with like-minded organization to provide the best solutions in the region and beyond.</p>
+        <div className="row items-center justify-center">
+          <div className="animate md:col-6 lg:col-5 md:order-2">
+            <div className="about-image relative p-[60px]">
+              <ImageFallback
+                className="animate relative w-full rounded-2xl"
+                src="/images/about/about.jpg"
+                width={425}
+                height={487}
+                alt="about"
+              />
+              <Circle
+                className="top-4 left-4 z-[-1]"
+                width={85}
+                height={85}
+              />
+              <Circle
+                width={37}
+                height={37}
+                fill={false}
+                className="top-20 right-10 z-[-1]"
+              />
+              <Circle
+                className="top-1/2 right-12 -z-[1]"
+                width={24}
+                height={24}
+              />
+              <Circle
+                className="bottom-6 right-6 z-[-1]"
+                width={85}
+                height={85}
+              />
+              <Circle
+                className="top-1/2 left-12 z-[-1]"
+                width={20}
+                height={20}
+              />
+              <Circle
+                className="bottom-12 left-8 z-[1]"
+                width={47}
+                height={47}
+                fill={false}
+              />
             </div>
           </div>
+          <div className="animate md:col-6 lg:col-4 md:order-1">
+            <p>WHO WE ARE</p>
+
+            <h2 className="section-title bar-left mt-4">Hello, We’re Jacada Here For Your Help</h2>
+            <p className="mt-10">Jacada Technology Limited was founded as a result of the ever-increasing need of real-time, accessible, efficiency, fast and accurate technology solutions that are tailor made to complement the business processes at work place. With this we have embarked on a journey to become a both SaaS and on premises solution provider, to achieve this we have strategically partnered with like-minded organization to provide the best solutions in the region and beyond.</p>
+            <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
+              {stats.map((stat) => (
+                <div key={stat.id} className="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6">
+                  <dt className="text-sm leading-6 text-gray-600">{stat.name}</dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
+      </div>
 
 
       {/* Features */}
@@ -484,6 +498,11 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
       {/* Special Features */}
       <section id="services" className="section">
         <div className="container">
+          <div className="animate text-center">
+            <p className="uppercase">{speciality.sub_title}</p>
+            {markdownify(speciality.title, "h2", "mt-4 section-title")}
+            {markdownify(speciality.description, "p", "mt-10")}
+          </div>
           <div className="row items-center justify-center">
             <div className="animate lg:col-6 lg:order-2">
               <ImageFallback
@@ -544,7 +563,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
               {markdownify(speciality.primary2.description, "p", "mt-10")}
             </div>
           </div>
-          
+
           <div className="row items-center">
             <div className="animate lg:col-6">
               <ImageFallback
@@ -764,10 +783,10 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative z-10">
               <h2 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
-              Our Pricing Plan
+                Our Pricing Plan
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-              Get Started with storage plans in Kenya with the starter package from Ksh. 600 per month (50 GB Storage).
+                Get Started with storage plans in Kenya with the starter package from Ksh. 600 per month (50 GB Storage).
               </p>
               <div className="mt-16 flex justify-center">
                 <RadioGroup
@@ -904,81 +923,81 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                 <p className="mt-10">We can’t wait to hear from you.</p>
               </div>
               <div className="section row items-center justify-center">
-          <div className="animate lg:col-5">
-            <ImageFallback
-              className="mx-auto lg:pr-10"
-              src="/images/vectors/contact.png"
-              width={497}
-              height={397}
-              alt=""
-            />
-          </div>
-          <div className="animate lg:col-5">
-            <form
-              method="POST"
-              action={config.params.contact_form_action}
-              className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
-            >
-              <h2 className="h4 mb-6">Send A Message</h2>
-              <div className="mb-6">
-                <label
-                  className="mb-2 block font-medium text-dark"
-                  htmlFor="name"
-                >
-                  Name
-                </label>
-                <input
-                  className="form-input w-full"
-                  name="name"
-                  placeholder="Full Name"
-                  type="text"
-                  required
-                />
+                <div className="animate lg:col-5">
+                  <ImageFallback
+                    className="mx-auto lg:pr-10"
+                    src="/images/vectors/contact.png"
+                    width={497}
+                    height={397}
+                    alt=""
+                  />
+                </div>
+                <div className="animate lg:col-5">
+                  <form
+                    method="POST"
+                    action={config.params.contact_form_action}
+                    className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
+                  >
+                    <h2 className="h4 mb-6">Send A Message</h2>
+                    <div className="mb-6">
+                      <label
+                        className="mb-2 block font-medium text-dark"
+                        htmlFor="name"
+                      >
+                        Name
+                      </label>
+                      <input
+                        className="form-input w-full"
+                        name="name"
+                        placeholder="Full Name"
+                        type="text"
+                        required
+                      />
+                    </div>
+                    <div className="mb-6">
+                      <label
+                        className="mb-2 block font-medium text-dark"
+                        htmlFor="email"
+                      >
+                        Email
+                      </label>
+                      <input
+                        className="form-input w-full"
+                        name="email"
+                        placeholder="Email Address"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mb-6">
+                      <label
+                        className="mb-2 block font-medium text-dark"
+                        htmlFor="subject"
+                      >
+                        Subject
+                      </label>
+                      <input
+                        className="form-input w-full"
+                        name="subject"
+                        type="text"
+                        required
+                      />
+                    </div>
+                    <div className="mb-6">
+                      <label
+                        className="mb-2 block font-medium text-dark"
+                        htmlFor="message"
+                      >
+                        Message
+                      </label>
+                      <textarea className="form-textarea w-full" rows="6" />
+                    </div>
+                    <button className="btn btn-primary block w-full">
+                      Submit Now
+                    </button>
+                  </form>
+                </div>
               </div>
-              <div className="mb-6">
-                <label
-                  className="mb-2 block font-medium text-dark"
-                  htmlFor="email"
-                >
-                  Email
-                </label>
-                <input
-                  className="form-input w-full"
-                  name="email"
-                  placeholder="Email Address"
-                  type="email"
-                  required
-                />
-              </div>
-              <div className="mb-6">
-                <label
-                  className="mb-2 block font-medium text-dark"
-                  htmlFor="subject"
-                >
-                  Subject
-                </label>
-                <input
-                  className="form-input w-full"
-                  name="subject"
-                  type="text"
-                  required
-                />
-              </div>
-              <div className="mb-6">
-                <label
-                  className="mb-2 block font-medium text-dark"
-                  htmlFor="message"
-                >
-                  Message
-                </label>
-                <textarea className="form-textarea w-full" rows="6" />
-              </div>
-              <button className="btn btn-primary block w-full">
-                Submit Now
-              </button>
-            </form>
-          </div>
-        </div>
             </div>
             <div className="bg-theme absolute top-0 left-0 w-full">
               <Circle

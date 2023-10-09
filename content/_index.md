@@ -44,12 +44,15 @@ features:
 intro:
   title: Built Exclusively For You
   subtitle: SHORT INTRO VIDEO
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.
+  description: we help you bring in top-notch Technology solutions for either your business or personal use.
   thumbnail: "/images/video-popup.jpg"
   video_id: cc4IxEprSU8
 
 #speciality
 speciality:
+  sub_title: OUR SERVICES
+  title: Proven solutions <br/> for real-world problems.
+  description: We believe in efficiency and maximizing our resources to provide the best value to our clients. 
   primary:
     title: Software development
     subtitle: WEB & MOBILE
