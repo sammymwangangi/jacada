@@ -18,6 +18,8 @@ import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
 import config from "@config/config.json";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 
 const frequencies = [
@@ -101,6 +103,38 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
   const paginationRef = useRef(null);
   const testimonialPaginationRef = useRef(null);
   const [frequency, setFrequency] = useState(frequencies[0])
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_4k4fxj8', 'template_0of8cl7', form.current, 'zDHLJkk144PBe95hk')
+      .then((result) => {
+        console.log(result.text);
+        // alert("Message sent!"); // Display a notification
+        Swal.fire({
+          text: 'Your message has been sent.',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 3000,
+          toast: true,
+          position: 'top-end'
+        })
+        form.current.reset(); // Clear the form fields
+      }, (error) => {
+        Swal.fire({
+          title: 'Error!',
+          text: 'There was a problem sending your message',
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 1500,
+          toast: true,
+          position: 'top-end'
+        })
+        console.log(error.text);
+      });
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -934,8 +968,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                 </div>
                 <div className="animate lg:col-5">
                   <form
-                    method="POST"
-                    action={config.params.contact_form_action}
+                    ref={form} onSubmit={sendEmail}
                     className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
                   >
                     <h2 className="h4 mb-6">Send A Message</h2>
@@ -990,7 +1023,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                       >
                         Message
                       </label>
-                      <textarea className="form-textarea w-full" rows="6" />
+                      <textarea name="message" className="form-textarea w-full" rows="6" />
                     </div>
                     <button className="btn btn-primary block w-full">
                       Submit Now

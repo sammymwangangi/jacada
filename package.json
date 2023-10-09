@@ -11,6 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "clsx": "^2.0.0",
@@ -33,6 +34,7 @@
     "react-visibility-sensor": "^5.1.1",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
+    "sweetalert2": "^11.7.32",
     "swiper": "^9.0.0"
   },
   "devDependencies": {
