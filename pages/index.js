@@ -304,7 +304,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
       </section>
 
       {/* About */}
-      <div className="section container">
+      <div id="about" className="section container">
           <div className="row items-center justify-center">
             <div className="animate md:col-6 lg:col-5 md:order-2">
               <div className="about-image relative p-[60px]">

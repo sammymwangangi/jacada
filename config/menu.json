@@ -6,29 +6,37 @@
     },
     {
       "name": "About",
-      "url": "/about"
+      "url": "/#about"
     },
     {
       "name": "Services",
-      "url": "#services"
+      "url": "/#services"
     },
     {
       "name": "Pricing",
-      "url": "#pricing"
+      "url": "/#pricing"
     },
     {
       "name": "Contact",
-      "url": "#contact-us"
+      "url": "/#contact-us"
     }
   ],
   "footer": [
     {
       "name": "About",
-      "url": "/about"
+      "url": "/#about"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
+      "name": "Services",
+      "url": "/#services"
+    },
+    {
+      "name": "Pricing",
+      "url": "/#pricing"
+    },
+    {
+      "name": "Contact",
+      "url": "/#contact-us"
     },
     {
       "name": "Terms & Conditions",
