@@ -1,7 +1,7 @@
 ---
 banner:
   title: "We Develop Digital Strategies, <br/>Products And Services."
-  image: /images/banner-app.png
+  image: /images/banner.svg
   link:
     label: Get Quote
     href: "#contact-us"
