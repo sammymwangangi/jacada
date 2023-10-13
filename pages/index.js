@@ -555,6 +555,13 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                 "mt-4 section-title bar-left"
               )}
               {markdownify(speciality.primary.description, "p", "mt-10")}
+              <Link
+                href={speciality.primary.link}
+                className="text-sm font-semibold leading-6 text-[#a7bd63]"
+                aria-describedby="featured-post"
+              >
+                Learn more <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
           <div className="row items-center">
@@ -575,6 +582,13 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                 "mt-4 section-title bar-left"
               )}
               {markdownify(speciality.secondary.description, "p", "mt-10")}
+              <Link
+                href={speciality.secondary.link}
+                className="text-sm font-semibold leading-6 text-[#a7bd63]"
+                aria-describedby="featured-post"
+              >
+                Learn more <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
           <div className="row items-center justify-center">
@@ -595,6 +609,13 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                 "mt-4 section-title bar-left"
               )}
               {markdownify(speciality.primary2.description, "p", "mt-10")}
+              <Link
+                href={speciality.primary2.link}
+                className="text-sm font-semibold leading-6 text-[#a7bd63]"
+                aria-describedby="featured-post"
+              >
+                Learn more <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
 
@@ -616,6 +637,13 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                 "mt-4 section-title bar-left"
               )}
               {markdownify(speciality.secondary2.description, "p", "mt-10")}
+              <Link
+                href={speciality.secondary2.link}
+                className="text-sm font-semibold leading-6 text-[#a7bd63]"
+                aria-describedby="featured-post"
+              >
+                Learn more <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
           <div className="row items-center justify-center">
@@ -636,12 +664,23 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                 "mt-4 section-title bar-left"
               )}
               {markdownify(speciality.secondary3.description, "p", "mt-10")}
+              <Link
+                href={speciality.secondary3.link}
+                className="text-sm font-semibold leading-6 text-[#a7bd63]"
+                aria-describedby="featured-post"
+              >
+                Learn more <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section container-xl relative">
+        <Link
+          href="/services/customer-services"
+        >
+
         <div className="bg-theme absolute top-0 left-0 w-full">
           <Circle
             className="left-[7%] top-[21%]"
@@ -723,6 +762,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
             </div>
           </div>
         </div>
+        </Link>
       </section>
 
       {/* Testimonial */}

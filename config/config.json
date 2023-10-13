@@ -12,7 +12,8 @@
   "settings": {
     "pagination": 6,
     "summary_length": 200,
-    "blog_folder": "posts"
+    "blog_folder": "posts",
+    "services_folder": "services"
   },
 
   "params": {
@@ -31,7 +32,7 @@
   "nav_button": {
     "enable": true,
     "label": "Get Quote",
-    "link": "#contact-us"
+    "link": "/#contact-us"
   },
 
   "metadata": {
@@ -42,11 +43,11 @@
 
   "call_to_action": {
     "enable": true,
-    "title": "Do You Have Any Question",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.",
+    "title": "Let’s work together",
+    "content": "We can’t wait to hear from you.",
     "button": {
       "label": "Get Quote",
-      "link": "#contact-us"
+      "link": "/#contact-us"
     }
   },
 

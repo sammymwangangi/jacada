@@ -48,6 +48,7 @@ intro:
   thumbnail: "/images/video-popup.jpg"
   video_id: cc4IxEprSU8
 
+
 #speciality
 speciality:
   sub_title: OUR SERVICES
@@ -58,27 +59,32 @@ speciality:
     subtitle: WEB & MOBILE
     description: At the core of Jacada is Software Development. We specialise in creating and customizing software solutions for small to large enterprices.
     image: /images/services/softwarenew.jpg
+    link: /services/software-development
   secondary:
     title: Bespoke reports
     subtitle: REPORTING SOFTWARE
     description: We create and integrate reporting software to existing systems and data warehouses. Such reports include Accounting, Financial, Sales, etc.
     image: /images/services/reportsnew.jpg
+    link: /services/bespoke-reports
   primary2:
     title: Biometric and Security
     subtitle: BIOMETRIC AND SECURITY
     description: We configure and install Biometrics/Security systems such as Attendance systems, security systems and CCTV cameras Each person's unique biometric identity can be used to replace or at least augment password systems for computers, phones, and restricted access rooms and buildings.In other words, biometric security means your body becomes the “key” to unlock your access.
     image: /images/services/biometricnew.jpg
+    link: /services/biometric-and-security
   secondary2:
     title: AUTOMATION
     subtitle: AUTOMATED BACKUP
     description: Instant gratification. Fastest channel for resolution of queries. Simple conversations allowing them to chat with businesses like they do with friends and family. Reach out to business instantly without the hassles of writing mails or dialing IVRs Making customer interactions simpler and quicker. Saving thousands of work hours through automation of routine services. Increasing customer satisfaction and positive social feedback.
 
     image: /images/services/automation.svg
+    link: /services/automation
   secondary3:
     title: DIGITAL STRATEGY
     subtitle: DIGITAL STRATEGY
     description: We provide a technology concerned with performing a process by means of programmed commands combined with automatic feedback control to ensure proper execution of the instructions.
     image: /images/services/digital-strategy.jpg
+    link: /services/digital-strategy
 
 
 #Testimonial

@@ -3,27 +3,26 @@ import ServiceSingle from "@layouts/ServiceSingle";
 import { getSinglePage } from "@lib/contentParser";
 import parseMDX from "@lib/utils/mdxParser";
 import { sortByDate } from "@lib/utils/sortFunctions";
-const { blog_folder } = config.settings;
+const { services_folder } = config.settings;
 
-// post single layout
-const Article = ({ post, authors, mdxContent, slug, recentPosts }) => {
-  const { frontmatter, content } = post[0];
+// service single layout
+const Article = ({ service, mdxContent, slug, recentServices }) => {
+  const { frontmatter, content } = service[0];
 
   return (
     <ServiceSingle
       frontmatter={frontmatter}
       content={content}
       mdxContent={mdxContent}
-      authors={authors}
       slug={slug}
-      recentPosts={recentPosts}
+      recentServices={recentServices}
     />
   );
 };
 
-// get post single slug
+// get service single slug
 export const getStaticPaths = () => {
-  const allSlug = getSinglePage(`content/${blog_folder}`);
+  const allSlug = getSinglePage(`content/${services_folder}`);
   const paths = allSlug.map((item) => ({
     params: {
       single: item.slug,
@@ -36,20 +35,20 @@ export const getStaticPaths = () => {
   };
 };
 
-// get post single content
+// get service single content
 export const getStaticProps = async ({ params }) => {
   const { single } = params;
-  const posts = getSinglePage(`content/${blog_folder}`);
-  const post = posts.filter((p) => p.slug == single);
-  const mdxContent = await parseMDX(post[0].content);
-  const recentPosts = sortByDate(posts).filter((post) => post.slug !== single);
+  const services = getSinglePage(`content/${services_folder}`);
+  const service = services.filter((p) => p.slug == single);
+  const mdxContent = await parseMDX(service[0].content);
+  const recentServices = sortByDate(services).filter((service) => service.slug !== single);
 
   return {
     props: {
-      post: post,
+      service: service,
       mdxContent: mdxContent,
       slug: single,
-      recentPosts: recentPosts,
+      recentServices: recentServices,
     },
   };
 };
