@@ -1,5 +1,5 @@
 import config from "@config/config.json";
-import ServiceSingle from "@layouts/ServiceSingle";
+import PostSingle from "@layouts/PostSingle";
 import { getSinglePage } from "@lib/contentParser";
 import parseMDX from "@lib/utils/mdxParser";
 import { sortByDate } from "@lib/utils/sortFunctions";
@@ -10,7 +10,7 @@ const Article = ({ post, authors, mdxContent, slug, recentPosts }) => {
   const { frontmatter, content } = post[0];
 
   return (
-    <ServiceSingle
+    <PostSingle
       frontmatter={frontmatter}
       content={content}
       mdxContent={mdxContent}
