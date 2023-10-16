@@ -104,6 +104,59 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
   const testimonialPaginationRef = useRef(null);
   const [frequency, setFrequency] = useState(frequencies[0])
 
+  //Nodemailer mail states
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Sending')
+
+    let data = {
+      name,
+      email,
+      message,
+      subject
+    }
+
+    fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+
+        // Notify user
+        Swal.fire({
+          text: 'Your message has been sent.',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 3000,
+          toast: true,
+          position: 'top-end'
+        })
+        
+        // reset the form fields
+        form.current.reset();
+
+        // reset the state
+        setSubmitted(true)
+        setName('')
+        setEmail('')
+        setSubject('')
+        setMessage('')
+      }
+    })
+  }
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -681,87 +734,87 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
           href="/services/customer-services"
         >
 
-        <div className="bg-theme absolute top-0 left-0 w-full">
-          <Circle
-            className="left-[7%] top-[21%]"
-            width={32}
-            height={32}
-            fill={false}
-          />
-          <Circle
-            className="left-[30%] top-[10%]"
-            width={20}
-            height={20}
-            fill={false}
-          />
-          <Circle
-            className="left-[4%] bottom-[35%]"
-            width={20}
-            height={20}
-            fill={false}
-          />
-          <Circle
-            className="left-[10%] bottom-[11%]"
-            width={37}
-            height={37}
-            fill={false}
-          />
-          <Circle
-            className="left-[44%] bottom-[48%]"
-            width={37}
-            height={37}
-            fill={false}
-          />
-          <Circle
-            className="left-[35%] bottom-[22%]"
-            width={20}
-            height={20}
-            fill={false}
-          />
-          <Circle
-            className="right-[32%] top-[2%]"
-            width={47}
-            height={47}
-            fill={false}
-          />
-        </div>
-        <div className="row items-center justify-center py-[90px]">
-          <div className="md:col-6 xl:col-4">
-            <div className="animate p-5">
-              <p>CUSTOMER SERVICES</p>
-              <h2 className="mt-4 section-title bar-left">CUSTOMER SERVICES</h2>
-              <p className="mt-10">
-                Your customers and employees want to talk to you—make it easy for them. Our support products are flexible and empower you to assist people when they need you most. Conversations flow seamlessly across all channels, leading to greater productivity and satisfaction all around.
-              </p>
-
-              <TagList className="mt-4">
-                <TagListItem>HELP DESK-TICKETING</TagListItem>
-                <TagListItem>CALL CENTER</TagListItem>
-                <TagListItem>LIVE CHATS</TagListItem>
-                <TagListItem>WHATSAPP INTEGRATIONS</TagListItem>
-                <TagListItem>IT CONSULTANCY</TagListItem>
-              </TagList>
-
-            </div>
+          <div className="bg-theme absolute top-0 left-0 w-full">
+            <Circle
+              className="left-[7%] top-[21%]"
+              width={32}
+              height={32}
+              fill={false}
+            />
+            <Circle
+              className="left-[30%] top-[10%]"
+              width={20}
+              height={20}
+              fill={false}
+            />
+            <Circle
+              className="left-[4%] bottom-[35%]"
+              width={20}
+              height={20}
+              fill={false}
+            />
+            <Circle
+              className="left-[10%] bottom-[11%]"
+              width={37}
+              height={37}
+              fill={false}
+            />
+            <Circle
+              className="left-[44%] bottom-[48%]"
+              width={37}
+              height={37}
+              fill={false}
+            />
+            <Circle
+              className="left-[35%] bottom-[22%]"
+              width={20}
+              height={20}
+              fill={false}
+            />
+            <Circle
+              className="right-[32%] top-[2%]"
+              width={47}
+              height={47}
+              fill={false}
+            />
           </div>
-          <div className="md:col-6 xl:col-5">
-            <div className="px-4 ">
-              {/* <VideoPopup
+          <div className="row items-center justify-center py-[90px]">
+            <div className="md:col-6 xl:col-4">
+              <div className="animate p-5">
+                <p>CUSTOMER SERVICES</p>
+                <h2 className="mt-4 section-title bar-left">CUSTOMER SERVICES</h2>
+                <p className="mt-10">
+                  Your customers and employees want to talk to you—make it easy for them. Our support products are flexible and empower you to assist people when they need you most. Conversations flow seamlessly across all channels, leading to greater productivity and satisfaction all around.
+                </p>
+
+                <TagList className="mt-4">
+                  <TagListItem>HELP DESK-TICKETING</TagListItem>
+                  <TagListItem>CALL CENTER</TagListItem>
+                  <TagListItem>LIVE CHATS</TagListItem>
+                  <TagListItem>WHATSAPP INTEGRATIONS</TagListItem>
+                  <TagListItem>IT CONSULTANCY</TagListItem>
+                </TagList>
+
+              </div>
+            </div>
+            <div className="md:col-6 xl:col-5">
+              <div className="px-4 ">
+                {/* <VideoPopup
                   id={video.video_id}
                   thumbnail={video.thumbnail}
                   width={540}
                   height={585}
                 /> */}
-              <ImageFallback
-                className="animate relative w-full rounded-2xl"
-                src="/images/services/customer-service.png"
-                width={425}
-                height={487}
-                alt=""
-              />
+                <ImageFallback
+                  className="animate relative w-full rounded-2xl"
+                  src="/images/services/customer-service.png"
+                  width={425}
+                  height={487}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
-        </div>
         </Link>
       </section>
 
@@ -1007,9 +1060,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                   />
                 </div>
                 <div className="animate lg:col-5">
-                  <form
-                    ref={form} onSubmit={sendEmail}
-                    className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
+                  <form ref={form} className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
                   >
                     <h2 className="h4 mb-6">Send A Message</h2>
                     <div className="mb-6">
@@ -1021,6 +1072,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                       </label>
                       <input
                         className="form-input w-full"
+                        onChange={(e) => { setName(e.target.value) }}
                         name="name"
                         placeholder="Full Name"
                         type="text"
@@ -1036,6 +1088,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                       </label>
                       <input
                         className="form-input w-full"
+                        onChange={(e) => { setEmail(e.target.value) }}
                         name="email"
                         placeholder="Email Address"
                         type="email"
@@ -1051,6 +1104,7 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                       </label>
                       <input
                         className="form-input w-full"
+                        onChange={(e) => { setSubject(e.target.value) }}
                         name="subject"
                         type="text"
                         required
@@ -1063,9 +1117,9 @@ const Home = ({ banner, about, brands, features, intro, speciality, testimonial 
                       >
                         Message
                       </label>
-                      <textarea name="message" className="form-textarea w-full" rows="6" />
+                      <textarea onChange={(e) => { setMessage(e.target.value) }} name="message" className="form-textarea w-full" rows="6" />
                     </div>
-                    <button className="btn btn-primary block w-full">
+                    <button className="btn btn-primary block w-full" onClick={(e)=>{handleSubmit(e)}}>
                       Submit Now
                     </button>
                   </form>
